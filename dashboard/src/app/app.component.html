@@ -1,0 +1,23 @@
+<div class="app-container">
+  <div class="title">{{title}}</div>
+  <div class="checkbox-container">
+    <mat-checkbox [(ngModel)]="line">Line</mat-checkbox>
+    <mat-checkbox [(ngModel)]="bar">Bar</mat-checkbox>
+    <mat-checkbox [(ngModel)]="pie">Pie</mat-checkbox>
+    <mat-checkbox [(ngModel)]="radar">Radar</mat-checkbox>
+  </div>
+  <div class="chart-container">
+    <ng-container *ngIf="line">
+      <app-line></app-line>
+    </ng-container>
+    <ng-container *ngIf="bar">
+      <app-bar></app-bar>
+    </ng-container>
+    <ng-container *ngIf="pie">
+      <app-pie></app-pie>
+    </ng-container>
+    <ng-container *ngIf="radar">
+      <app-radar></app-radar>
+    </ng-container>
+  </div>
+</div>
